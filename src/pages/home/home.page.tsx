@@ -14,6 +14,7 @@ export default function HomePage({}: Props) {
   const { theme } = useTheme();
 
   useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <>
@@ -26,15 +27,11 @@ export default function HomePage({}: Props) {
       <Layout>
         <main className={styles.main}>
           <h1>Hey, I am Anıl</h1>
-          {mounted && (
-            <h1
-              className={`${styles.title} ${
-                theme === "dark" ? styles.dark : ""
-              }`}
-            >
-              {"I'm a Software Engineer"}
-            </h1>
-          )}
+          <h1
+            className={`${styles.title} ${theme === "dark" ? styles.dark : ""}`}
+          >
+            {"I'm a Software Engineer"}
+          </h1>
           <p className={styles.subTitle}>
             Software Engineer{" "}
             <a href="https://cimri.com" target="_blank" rel="noreferrer">
@@ -53,16 +50,14 @@ export default function HomePage({}: Props) {
             <b>JavaScript</b> and <b>Golang</b> mostly.
           </p>
           <CtaLink text="About Me" href="/about" />
-          {mounted && (
-            <div
-              className={`${styles.connect} ${
-                theme === "dark" ? styles.dark : ""
-              }`}
-            >
-              <p>Feel free to reach out to me</p>
-              <Link href="/about#connect">Let&apos;s Connect</Link>
-            </div>
-          )}
+          <div
+            className={`${styles.connect} ${
+              theme === "dark" ? styles.dark : ""
+            }`}
+          >
+            <p>Feel free to reach out to me</p>
+            <Link href="/about#connect">Let&apos;s Connect</Link>
+          </div>
         </main>
       </Layout>
     </>

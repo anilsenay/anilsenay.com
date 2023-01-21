@@ -31,6 +31,7 @@ export default function Header({}: Props) {
   const { theme, setTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <header className={styles.header}>
@@ -44,11 +45,9 @@ export default function Header({}: Props) {
           />
         ))}
       </nav>
-      {mounted && (
-        <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-          {theme === "light" ? <SunIcon /> : <MoonIcon />}
-        </div>
-      )}
+      <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        {theme === "light" ? <SunIcon /> : <MoonIcon />}
+      </div>
     </header>
   );
 }

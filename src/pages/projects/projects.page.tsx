@@ -13,6 +13,7 @@ export default function ProjectsPage({}: Props) {
   const { theme } = useTheme();
 
   useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   return (
     <>
@@ -29,15 +30,13 @@ export default function ProjectsPage({}: Props) {
             Some of my personal projects in{" "}
             <b className="font-medium">Github</b>
           </h3>
-          <TextSlider textOpacity={theme === "light" && mounted ? 0.4 : 0.2} />
-          {mounted && (
-            <div className={styles.projects}>
-              <Project theme={theme} />
-              <Project theme={theme} />
-              <Project theme={theme} />
-              <Project theme={theme} />
-            </div>
-          )}
+          <TextSlider textOpacity={theme === "light" ? 0.4 : 0.2} />
+          <div className={styles.projects}>
+            <Project theme={theme} />
+            <Project theme={theme} />
+            <Project theme={theme} />
+            <Project theme={theme} />
+          </div>
         </main>
       </Layout>
     </>
