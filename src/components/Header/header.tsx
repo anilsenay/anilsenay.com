@@ -28,7 +28,9 @@ function NavLink({ text, href, active }: NavLinkProps) {
 export default function Header({}: Props) {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
+  const { theme, systemTheme, setTheme } = useTheme();
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
@@ -47,7 +49,7 @@ export default function Header({}: Props) {
         ))}
       </nav>
       <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-        {theme === "light" ? <SunIcon /> : <MoonIcon />}
+        {currentTheme === "light" ? <SunIcon /> : <MoonIcon />}
       </div>
     </header>
   );
