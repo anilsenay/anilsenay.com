@@ -1,0 +1,41 @@
+@import "@/styles/colors.scss";
+
+.main {
+  @apply mt-24 mb-12;
+
+  h1 {
+    font-size: 60px;
+    line-height: 82px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    width: fit-content;
+  }
+  .title {
+    @apply gradient;
+  }
+
+  .subTitle {
+    font-size: 20px;
+    @apply mt-11 mb-36;
+  }
+
+  .about {
+    font-size: 36px;
+    line-height: 60px;
+    font-weight: 300;
+    @apply mt-11 mb-12;
+  }
+
+  .connect {
+    @apply flex flex-col items-center justify-center p-44 mt-24;
+    border-radius: 30px;
+    background-color: $light-grey;
+    font-size: 36px;
+    line-height: 49px;
+
+    a {
+      color: $blue;
+      margin-top: 6px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+$light-grey: #f7f7f7;
+$grey: #d9d9d9;
+$blue: #31a3d3;
+
+$gradient-light: linear-gradient(
+  106.45deg,
+  #4ab1f1 0%,
+  rgba(86, 108, 236, 0.81) 34.9%,
+  rgba(215, 73, 175, 0.75) 70.83%,
+  #ff7c51 100%
+);
+
+.gradient {
+  background: $gradient-light;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

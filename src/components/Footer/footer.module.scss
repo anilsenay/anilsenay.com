@@ -1,6 +1,7 @@
 .footer {
   @apply container mx-auto;
   @apply flex items-center justify-center;
+  @apply p-12;
 
   p {
     @apply text-lg mr-auto;

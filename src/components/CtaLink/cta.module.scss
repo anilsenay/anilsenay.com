@@ -1,0 +1,8 @@
+.cta {
+  @apply items-center justify-center inline-flex;
+
+  .ctaText {
+    @apply font-medium text-xl;
+    margin-right: 10px;
+  }
+}

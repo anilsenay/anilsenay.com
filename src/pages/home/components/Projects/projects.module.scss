@@ -1,0 +1,23 @@
+@import "@/styles/colors.scss";
+
+.container {
+  height: 400px;
+  @apply mt-11 mb-12;
+
+  .content {
+    position: absolute;
+    display: flex;
+    left: -200px;
+    will-change: transform;
+    transform-style: preserve-3d;
+    transition: all 50ms;
+  }
+}
+
+.projectItem {
+  height: 400px;
+  width: 600px;
+  background-color: $grey;
+  border-radius: 10px;
+  margin-right: 20px;
+}

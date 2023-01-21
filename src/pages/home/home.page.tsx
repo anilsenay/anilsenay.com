@@ -2,6 +2,9 @@ import React from "react";
 import Head from "next/head";
 import styles from "./home.module.scss";
 import Layout from "@/components/Layout";
+import CtaLink from "@/components/CtaLink";
+import Link from "next/link";
+import Projects from "./components/Projects";
 
 type Props = {};
 
@@ -16,7 +19,30 @@ export default function HomePage({}: Props) {
       </Head>
       <Layout>
         <main className={styles.main}>
-          <h1 className="text-3xl font-bold underline">Home</h1>
+          <h1>Hey, I am Anıl</h1>
+          <h1 className={styles.title}>{"I'm a Software Engineer"}</h1>
+          <p className={styles.subTitle}>
+            Software Engineer{" "}
+            <a href="https://cimri.com" target="_blank" rel="noreferrer">
+              <b>@Cimri</b>
+            </a>
+          </p>
+          <h2>Selected Projects</h2>
+          <Projects />
+          <CtaLink text="See others" href="/projects" full />
+
+          <h2 className="mt-24">About</h2>
+          <p className={styles.about}>
+            I&apos;ve been interested in computers and programming since my
+            childhood. Coding and design, which I started with curiosity and
+            passion, are now a big part of my life. I am interested in{" "}
+            <b>JavaScript</b> and <b>Golang</b> mostly.
+          </p>
+          <CtaLink text="About Me" href="/about" />
+          <div className={styles.connect}>
+            <p>Feel free to reach out to me</p>
+            <Link href="/about#connect">Let&apos;s Connect</Link>
+          </div>
         </main>
       </Layout>
     </>
