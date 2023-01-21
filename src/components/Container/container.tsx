@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./container.module.scss";
 
 type Props = {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 };
 
 export default function Container({ children }: Props) {

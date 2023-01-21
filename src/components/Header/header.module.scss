@@ -1,0 +1,16 @@
+.header {
+  @apply container mx-auto;
+  @apply py-12;
+  @apply flex items-center;
+
+  nav {
+    @apply mr-auto;
+
+    .link {
+      @apply text-lg mr-12;
+    }
+    .active {
+      @apply font-bold underline underline-offset-4;
+    }
+  }
+}

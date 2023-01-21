@@ -1,0 +1,16 @@
+.footer {
+  @apply container mx-auto;
+  @apply flex items-center justify-center;
+
+  p {
+    @apply text-lg mr-auto;
+  }
+
+  .icons {
+    @apply flex;
+
+    * + * {
+      @apply ml-9;
+    }
+  }
+}
