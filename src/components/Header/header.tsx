@@ -30,11 +30,11 @@ export default function Header({}: Props) {
   const router = useRouter();
   const { theme, systemTheme, setTheme } = useTheme();
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
-  console.log("theme", theme);
+
+  console.log("theme", theme, systemTheme);
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <header className={styles.header}>
@@ -48,7 +48,9 @@ export default function Header({}: Props) {
           />
         ))}
       </nav>
-      <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      <div
+        onClick={() => setTheme(currentTheme === "light" ? "dark" : "light")}
+      >
         {currentTheme === "light" ? <SunIcon /> : <MoonIcon />}
       </div>
     </header>
