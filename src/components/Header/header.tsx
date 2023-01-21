@@ -1,7 +1,7 @@
 import SunIcon from "@/assets/sun";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./header.module.scss";
 import { useTheme } from "next-themes";
 import { navigation } from "@/consts/app-config";
@@ -26,8 +26,11 @@ function NavLink({ text, href, active }: NavLinkProps) {
 }
 
 export default function Header({}: Props) {
+  const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
 
   return (
     <header className={styles.header}>
@@ -41,9 +44,11 @@ export default function Header({}: Props) {
           />
         ))}
       </nav>
-      <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
-        {theme === "light" ? <SunIcon /> : <MoonIcon />}
-      </div>
+      {mounted && (
+        <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+          {theme === "light" ? <SunIcon /> : <MoonIcon />}
+        </div>
+      )}
     </header>
   );
 }

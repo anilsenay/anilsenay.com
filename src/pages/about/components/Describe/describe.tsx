@@ -1,32 +1,37 @@
 import { useTheme } from "next-themes";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./describe.module.scss";
 
 type Props = {};
 
 export default function Describe({}: Props) {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   return (
     <div className={styles.describe}>
       <span className={styles.sticky}>I describe myself as</span>
       <div className={styles.texts}>
-        <span style={{ color: theme === "dark" ? "#F7DF1E" : "#000" }}>
+        <span style={{ color: theme === "dark" ? "#F7DF1E" : undefined }}>
           JavaScript Enthusiast
         </span>
-        <span style={{ color: theme === "dark" ? "#A76605" : "#000" }}>
+        <span style={{ color: theme === "dark" ? "#A76605" : undefined }}>
           Software Craftsman
         </span>
-        <span style={{ color: theme === "dark" ? "#61DAFB" : "#000" }}>
+        <span style={{ color: theme === "dark" ? "#61DAFB" : undefined }}>
           React Lover
         </span>
-        <span style={{ color: theme === "dark" ? "#3C9CCE" : "#000" }}>
+        <span style={{ color: theme === "dark" ? "#3C9CCE" : undefined }}>
           Gopher
         </span>
-        <span style={{ color: theme === "dark" ? "#E92C81" : "#000" }}>
+        <span style={{ color: theme === "dark" ? "#E92C81" : undefined }}>
           Gamer
         </span>
-        <span style={{ color: theme === "dark" ? "#64E69C" : "#000" }}>
+        <span style={{ color: theme === "dark" ? "#64E69C" : undefined }}>
           Geek
         </span>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import styles from "./home.module.scss";
 import Layout from "@/components/Layout";
@@ -10,7 +10,11 @@ import { useTheme } from "next-themes";
 type Props = {};
 
 export default function HomePage({}: Props) {
+  const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
+
   return (
     <>
       <Head>
@@ -22,11 +26,15 @@ export default function HomePage({}: Props) {
       <Layout>
         <main className={styles.main}>
           <h1>Hey, I am Anıl</h1>
-          <h1
-            className={`${styles.title} ${theme === "dark" ? styles.dark : ""}`}
-          >
-            {"I'm a Software Engineer"}
-          </h1>
+          {mounted && (
+            <h1
+              className={`${styles.title} ${
+                theme === "dark" ? styles.dark : ""
+              }`}
+            >
+              {"I'm a Software Engineer"}
+            </h1>
+          )}
           <p className={styles.subTitle}>
             Software Engineer{" "}
             <a href="https://cimri.com" target="_blank" rel="noreferrer">
@@ -35,12 +43,7 @@ export default function HomePage({}: Props) {
           </p>
           <h2>Selected Projects</h2>
           <Projects />
-          <CtaLink
-            text="See others"
-            href="/projects"
-            full
-            fill={theme === "dark" ? "#fff" : "#000"}
-          />
+          <CtaLink text="See others" href="/projects" full />
 
           <h2 className="mt-24">About</h2>
           <p className={styles.about}>
@@ -49,19 +52,17 @@ export default function HomePage({}: Props) {
             passion, are now a big part of my life. I am interested in{" "}
             <b>JavaScript</b> and <b>Golang</b> mostly.
           </p>
-          <CtaLink
-            text="About Me"
-            href="/about"
-            fill={theme === "dark" ? "#fff" : "#000"}
-          />
-          <div
-            className={`${styles.connect} ${
-              theme === "dark" ? styles.dark : ""
-            }`}
-          >
-            <p>Feel free to reach out to me</p>
-            <Link href="/about#connect">Let&apos;s Connect</Link>
-          </div>
+          <CtaLink text="About Me" href="/about" />
+          {mounted && (
+            <div
+              className={`${styles.connect} ${
+                theme === "dark" ? styles.dark : ""
+              }`}
+            >
+              <p>Feel free to reach out to me</p>
+              <Link href="/about#connect">Let&apos;s Connect</Link>
+            </div>
+          )}
         </main>
       </Layout>
     </>
