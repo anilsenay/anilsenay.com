@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  margin-top: 100px;
+
+  .content {
+    margin-left: 128px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 40px;
+  }
+}
+
+.experienceItem {
+  display: flex;
+  flex-direction: column;
+  & + & {
+    margin-top: 50px;
+  }
+
+  .timeline {
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  .description {
+    font-size: 24px;
+    line-height: 40px;
+    margin-top: 12px;
+  }
+}

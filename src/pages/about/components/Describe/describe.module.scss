@@ -1,0 +1,21 @@
+.describe {
+  font-size: 36px;
+  font-weight: bold;
+
+  .sticky {
+    position: sticky;
+    top: 60px;
+  }
+
+  .texts {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 50px;
+
+    span {
+      & + span {
+        margin-top: 20px;
+      }
+    }
+  }
+}

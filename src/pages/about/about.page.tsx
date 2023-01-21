@@ -2,6 +2,10 @@ import React from "react";
 import Head from "next/head";
 import styles from "./about.module.scss";
 import Layout from "@/components/Layout";
+import Describe from "./components/Describe";
+import AboutMe from "./components/AboutMe";
+import Experience from "./components/Experience";
+import Connect from "./components/Connect";
 
 type Props = {};
 
@@ -16,7 +20,14 @@ export default function AboutPage({}: Props) {
       </Head>
       <Layout>
         <main className={styles.main}>
-          <h1 className="text-3xl font-bold underline">About</h1>
+          <h1 className="text-center">about</h1>
+          <h3 className="font-light text-center mt-20 mb-24">
+            Hey, welcome to my website!
+          </h3>
+          <Describe />
+          <AboutMe />
+          <Experience />
+          <Connect />
         </main>
       </Layout>
     </>
