@@ -8,8 +8,7 @@
   }
 
   .texts {
-    display: inline-flex;
-    flex-direction: column;
+    @apply inline-flex flex-col;
     margin-left: 50px;
 
     span {

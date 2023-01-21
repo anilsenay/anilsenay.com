@@ -11,8 +11,8 @@
 }
 
 .experienceItem {
-  display: flex;
-  flex-direction: column;
+  @apply flex flex-col;
+
   & + & {
     margin-top: 50px;
   }

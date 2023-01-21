@@ -2,4 +2,8 @@
 
 .main {
   @apply mt-24 mb-12 flex flex-col justify-center;
+
+  .projects {
+    @apply flex flex-col items-center justify-center;
+  }
 }

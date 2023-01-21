@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import styles from "./projects.module.scss";
 import Layout from "@/components/Layout";
+import TextSlider from "./components/TextSlider";
+import Project from "./components/Project";
 
 type Props = {};
 
@@ -21,6 +23,13 @@ export default function ProjectsPage({}: Props) {
             Some of my personal projects in{" "}
             <b className="font-medium">Github</b>
           </h3>
+          <TextSlider />
+          <div className={styles.projects}>
+            <Project />
+            <Project />
+            <Project />
+            <Project />
+          </div>
         </main>
       </Layout>
     </>
