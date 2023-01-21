@@ -22,10 +22,34 @@ export default function Footer({}: Props) {
     <footer className={styles.footer}>
       <p>All rights reserved © Anıl Şenay 2023</p>
       <div className={styles.icons}>
-        <TwitterIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
-        <InstagramIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
-        <GithubIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
-        <LinkedinIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        <a
+          href="https://twitter.com/anilsenay"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <TwitterIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        </a>
+        <a
+          href="https://twitter.com/anilsenay"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <InstagramIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        </a>
+        <a
+          href="https://twitter.com/anilsenay"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <GithubIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        </a>
+        <a
+          href="https://twitter.com/anilsenay"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <LinkedinIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        </a>
       </div>
     </footer>
   );

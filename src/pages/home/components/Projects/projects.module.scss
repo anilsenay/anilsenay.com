@@ -3,14 +3,22 @@
 .container {
   height: 400px;
   @apply mt-11 mb-12;
+  overflow: hidden;
 
   .content {
+    width: 100%;
+    overflow: hidden;
     position: absolute;
     display: flex;
-    left: -200px;
     will-change: transform;
     transform-style: preserve-3d;
     transition: all 50ms;
+    left: 0;
+
+    .slider {
+      display: flex;
+      margin-left: -200px;
+    }
   }
 }
 
@@ -20,4 +28,5 @@
   background-color: $grey;
   border-radius: 10px;
   margin-right: 20px;
+  flex-shrink: 0;
 }

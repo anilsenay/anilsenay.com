@@ -3,8 +3,11 @@
 .container {
   height: 188px;
   @apply mt-11 mb-24;
+  overflow: hidden;
 
   .content {
+    width: 100%;
+    overflow: hidden;
     background-color: #000;
     color: #fff;
     left: 0;
