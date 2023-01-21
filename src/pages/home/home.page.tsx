@@ -11,10 +11,12 @@ type Props = {};
 
 export default function HomePage({}: Props) {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <>
@@ -28,7 +30,9 @@ export default function HomePage({}: Props) {
         <main className={styles.main}>
           <h1>Hey, I am Anıl</h1>
           <h1
-            className={`${styles.title} ${theme === "dark" ? styles.dark : ""}`}
+            className={`${styles.title} ${
+              currentTheme === "dark" ? styles.dark : ""
+            }`}
           >
             {"I'm a Software Engineer"}
           </h1>
@@ -52,7 +56,7 @@ export default function HomePage({}: Props) {
           <CtaLink text="About Me" href="/about" />
           <div
             className={`${styles.connect} ${
-              theme === "dark" ? styles.dark : ""
+              currentTheme === "dark" ? styles.dark : ""
             }`}
           >
             <p>Feel free to reach out to me</p>

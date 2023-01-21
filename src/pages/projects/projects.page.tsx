@@ -10,10 +10,12 @@ type Props = {};
 
 export default function ProjectsPage({}: Props) {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
+
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <>
@@ -30,12 +32,12 @@ export default function ProjectsPage({}: Props) {
             Some of my personal projects in{" "}
             <b className="font-medium">Github</b>
           </h3>
-          <TextSlider textOpacity={theme === "light" ? 0.4 : 0.2} />
+          <TextSlider textOpacity={currentTheme === "light" ? 0.4 : 0.2} />
           <div className={styles.projects}>
-            <Project theme={theme} />
-            <Project theme={theme} />
-            <Project theme={theme} />
-            <Project theme={theme} />
+            <Project theme={currentTheme} />
+            <Project theme={currentTheme} />
+            <Project theme={currentTheme} />
+            <Project theme={currentTheme} />
           </div>
         </main>
       </Layout>

@@ -10,20 +10,22 @@ type Props = {};
 
 export default function Footer({}: Props) {
   const [mounted, setMounted] = useState(false);
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
 
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
 
+  const currentTheme = theme === "system" ? systemTheme : theme;
+
   return (
     <footer className={styles.footer}>
       <p>All rights reserved © Anıl Şenay 2023</p>
       <div className={styles.icons}>
-        <TwitterIcon fill={theme === "dark" ? "#fff" : "#000"} />
-        <InstagramIcon fill={theme === "dark" ? "#fff" : "#000"} />
-        <GithubIcon fill={theme === "dark" ? "#fff" : "#000"} />
-        <LinkedinIcon fill={theme === "dark" ? "#fff" : "#000"} />
+        <TwitterIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        <InstagramIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        <GithubIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
+        <LinkedinIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
       </div>
     </footer>
   );

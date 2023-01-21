@@ -33,7 +33,6 @@ export default function Header({}: Props) {
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
 
-  console.log("theme", theme, systemTheme);
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
