@@ -32,6 +32,7 @@ export default function Header({}: Props) {
 
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
+  console.log("theme", theme);
 
   return (
     <header className={styles.header}>
