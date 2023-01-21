@@ -10,14 +10,58 @@
     background-color: #fff;
 
     .image {
+      position: relative;
       width: 600px;
       height: 326px;
-      background: $grey;
-      border: 7px solid #ffffff;
+      padding: 7px;
       box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05),
         0px 5.4px 5.3px rgba(0, 0, 0, 0.01), 0px 13px 12px rgba(0, 0, 0, 0.01),
         0px 24px 24px rgba(0, 0, 0, 0.02);
       border-radius: 30px;
+      transition: all 200ms;
+
+      &:hover {
+        .background {
+          opacity: 1;
+          background: $gradient-light;
+          inset: 2px;
+          border-radius: 30px;
+        }
+
+        .placeholder {
+          transform: scale(0.98);
+        }
+      }
+
+      .background {
+        position: absolute;
+        border-radius: 32px;
+        z-index: -1;
+        opacity: 0;
+        transition: all 400ms ease;
+        inset: 7px;
+      }
+
+      .placeholder {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        background: $grey;
+        transition: transform 400ms ease;
+      }
+    }
+    .imageDark {
+      background: #282828;
+      &:hover {
+        background: transparent;
+
+        .background {
+          opacity: 0.8;
+          background: $gradient-dark;
+          inset: 2px;
+          border-radius: 30px;
+        }
+      }
     }
   }
 

@@ -13,7 +13,14 @@ export default function Project({ theme }: Props) {
         className={styles.imageContainer}
         style={{ background: theme === "light" ? "#fff" : "#000" }}
       >
-        <div className={styles.image}></div>
+        <div
+          className={`${styles.image} ${
+            theme === "dark" ? styles.imageDark : ""
+          }`}
+        >
+          <div className={styles.placeholder} />
+          <div className={styles.background} />
+        </div>
       </div>
       <div className={styles.content}>
         <div className={styles.titleContainer}>
