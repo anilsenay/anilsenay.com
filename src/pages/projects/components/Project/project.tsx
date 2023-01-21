@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./project.module.scss";
 
 type Props = {
-  theme?: string;
+  theme?: string | undefined;
 };
 
 export default function Project({ theme }: Props) {
