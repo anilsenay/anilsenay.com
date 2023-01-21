@@ -14,7 +14,7 @@ function Link({ text, href }: { text: string; href: string }) {
 export default function Connect({}: Props) {
   return (
     <div className={styles.container}>
-      <h3>Connect</h3>
+      <h3 id="connect">Connect</h3>
       <div className={styles.links}>
         <Link href="https://twitter.com/anilsenay" text={"Twitter"} />
         <Link href="https://linkedin.com/in/anilsenay" text={"Linkedin"} />

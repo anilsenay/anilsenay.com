@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styles from "./header.module.scss";
-
+import { useTheme } from "next-themes";
 import { navigation } from "@/consts/app-config";
 import MoonIcon from "@/assets/moon";
 
@@ -26,8 +26,9 @@ function NavLink({ text, href, active }: NavLinkProps) {
 }
 
 export default function Header({}: Props) {
-  const [darkMode, setDarkMode] = useState(false);
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
+
   return (
     <header className={styles.header}>
       <nav>
@@ -40,8 +41,8 @@ export default function Header({}: Props) {
           />
         ))}
       </nav>
-      <div onClick={() => setDarkMode((v) => !v)}>
-        {darkMode ? <MoonIcon /> : <SunIcon />}
+      <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+        {theme === "light" ? <SunIcon /> : <MoonIcon />}
       </div>
     </header>
   );

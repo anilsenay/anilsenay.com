@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./text-slider.module.scss";
 
-type Props = {};
+type Props = {
+  textOpacity: number;
+};
 
 function Content() {
   return (
@@ -21,15 +23,21 @@ function Content() {
   );
 }
 
-export default function TextSlider({}: Props) {
+export default function TextSlider({ textOpacity }: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <div className={`${styles.slideItem} ${styles.slideLeft}`}>
+        <div
+          className={`${styles.slideItem} ${styles.slideLeft}`}
+          style={{ opacity: textOpacity }}
+        >
           <Content />
           <Content />
         </div>
-        <div className={`${styles.slideItem} ${styles.slideRight}`}>
+        <div
+          className={`${styles.slideItem} ${styles.slideRight}`}
+          style={{ opacity: textOpacity }}
+        >
           <Content />
           <Content />
         </div>

@@ -2,12 +2,17 @@ import StarIcon from "@/assets/star";
 import React from "react";
 import styles from "./project.module.scss";
 
-type Props = {};
+type Props = {
+  theme: string;
+};
 
-export default function Project({}: Props) {
+export default function Project({ theme }: Props) {
   return (
     <div className={styles.project}>
-      <div className={styles.imageContainer}>
+      <div
+        className={styles.imageContainer}
+        style={{ background: theme === "light" ? "#fff" : "#000" }}
+      >
         <div className={styles.image}></div>
       </div>
       <div className={styles.content}>

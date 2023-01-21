@@ -10,8 +10,12 @@
     margin-bottom: 4px;
     width: fit-content;
   }
+
   .title {
     @apply gradient;
+  }
+  .title.dark {
+    @apply gradient-dark;
   }
 
   .subTitle {
@@ -37,5 +41,8 @@
       color: $blue;
       margin-top: 6px;
     }
+  }
+  .connect.dark {
+    background-color: $dark-grey;
   }
 }

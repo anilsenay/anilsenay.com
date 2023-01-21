@@ -7,9 +7,10 @@ type Props = {
   href: string;
   text: string;
   full?: boolean;
+  fill?: string;
 };
 
-export default function CtaLink({ href, text, full }: Props) {
+export default function CtaLink({ href, text, full, fill }: Props) {
   return (
     <Link
       href={href}
@@ -17,7 +18,7 @@ export default function CtaLink({ href, text, full }: Props) {
       style={{ width: full ? "100%" : undefined }}
     >
       <span className={styles.ctaText}>{text}</span>
-      <RightArrow />
+      <RightArrow fill={fill} />
     </Link>
   );
 }

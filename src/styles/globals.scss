@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme="dark"] {
+  --background: black;
+  --foreground: white;
+}
+
+.dark,
+.dark body {
+  background: black;
+  color: white;
+}
+
 h1 {
   @apply text-8xl font-extrabold;
 }

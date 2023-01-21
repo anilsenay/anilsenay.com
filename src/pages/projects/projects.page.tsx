@@ -4,10 +4,13 @@ import styles from "./projects.module.scss";
 import Layout from "@/components/Layout";
 import TextSlider from "./components/TextSlider";
 import Project from "./components/Project";
+import { useTheme } from "next-themes";
 
 type Props = {};
 
 export default function ProjectsPage({}: Props) {
+  const { theme, themes } = useTheme();
+  console.log("themes", themes);
   return (
     <>
       <Head>
@@ -23,12 +26,12 @@ export default function ProjectsPage({}: Props) {
             Some of my personal projects in{" "}
             <b className="font-medium">Github</b>
           </h3>
-          <TextSlider />
+          <TextSlider textOpacity={theme === "light" ? 0.4 : 0.2} />
           <div className={styles.projects}>
-            <Project />
-            <Project />
-            <Project />
-            <Project />
+            <Project theme={theme} />
+            <Project theme={theme} />
+            <Project theme={theme} />
+            <Project theme={theme} />
           </div>
         </main>
       </Layout>
