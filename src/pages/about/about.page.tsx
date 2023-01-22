@@ -20,10 +20,8 @@ export default function AboutPage({}: Props) {
       </Head>
       <Layout>
         <main className={styles.main}>
-          <h1 className="text-center">about</h1>
-          <h3 className="font-light text-center mt-20 mb-24">
-            Hey, welcome to my website!
-          </h3>
+          <h1>about</h1>
+          <h3>Hey, welcome to my website!</h3>
           <Describe />
           <AboutMe />
           <Experience />

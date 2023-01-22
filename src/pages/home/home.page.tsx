@@ -46,7 +46,7 @@ export default function HomePage({}: Props) {
           <Projects />
           <CtaLink text="See others" href="/projects" full />
 
-          <h2 className="mt-24">About</h2>
+          <h2>About</h2>
           <p className={styles.about}>
             I&apos;ve been interested in computers and programming since my
             childhood. Coding and design, which I started with curiosity and

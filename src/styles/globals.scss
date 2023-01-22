@@ -20,21 +20,32 @@
 }
 
 h1 {
-  @apply text-8xl font-extrabold;
+  font-size: 96px;
+  line-height: 96px;
+  font-weight: 800;
 }
 
 h2 {
-  @apply text-4xl font-bold;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: bold;
 }
 
 h3 {
-  @apply text-3xl font-bold whitespace-nowrap;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
 h4 {
-  @apply text-2xl font-bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: bold;
 }
 
 h5 {
-  @apply text-xl font-bold;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: bold;
 }

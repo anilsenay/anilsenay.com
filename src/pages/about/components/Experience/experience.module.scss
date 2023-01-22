@@ -15,7 +15,8 @@
 }
 
 .experienceItem {
-  @apply flex flex-col;
+  display: flex;
+  flex-direction: column;
 
   & + & {
     margin-top: 50px;
@@ -34,5 +35,6 @@
     font-size: 24px;
     line-height: 40px;
     margin-top: 12px;
+    text-align: justify;
   }
 }

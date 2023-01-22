@@ -1,10 +1,14 @@
 @import "@/styles/colors.scss";
 
 .cta {
-  @apply items-center justify-center inline-flex;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   .ctaText {
-    @apply font-medium text-xl;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 500;
     margin-right: 10px;
   }
 

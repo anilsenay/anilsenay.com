@@ -1,9 +1,30 @@
 @import "@/styles/colors.scss";
 
 .main {
-  @apply mt-24 mb-12 flex flex-col justify-center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1,
+  h3 {
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 300;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    b {
+      font-weight: 500;
+    }
+  }
 
   .projects {
-    @apply flex flex-col items-center justify-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

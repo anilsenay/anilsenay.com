@@ -1,13 +1,19 @@
+@import "@/styles/container.scss";
+
 .header {
-  @apply container mx-auto;
-  @apply py-12;
-  @apply flex items-center;
+  @extend .Container;
+  display: flex;
+  align-items: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
 
   nav {
-    @apply mr-auto;
+    margin-right: auto;
 
     .link {
-      @apply text-lg mr-12;
+      font-size: 18px;
+      line-height: 28px;
+      margin-right: 48px;
       --bg: #000;
 
       position: relative;
@@ -32,7 +38,9 @@
       --bg: #fff;
     }
     .active {
-      @apply font-bold underline underline-offset-4;
+      font-weight: bold;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
   }
 }
