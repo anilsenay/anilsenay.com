@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "@/styles/reset.scss";
 
 :root {
   /* Your default theme */
@@ -17,6 +15,11 @@
 .dark body {
   background: black;
   color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 h1 {
@@ -48,4 +51,24 @@ h5 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: bold;
+}
+
+b {
+  font-weight: bold;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
 }

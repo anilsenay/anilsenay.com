@@ -6,11 +6,11 @@
   flex-direction: column;
   justify-content: center;
 
-  h1 {
+  & > h1 {
     text-align: center;
   }
 
-  h3 {
+  & > h3 {
     font-weight: 300;
     text-align: center;
     margin-top: 80px;

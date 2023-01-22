@@ -17,15 +17,15 @@
   }
 
   .title {
-    @apply gradient;
+    @extend .gradient;
   }
   .title.dark {
-    @apply gradient-dark;
+    @extend .gradient-dark;
   }
 
   .subTitle {
     font-size: 20px;
-    margin-top: 44px;
+    margin-top: 48px;
     margin-bottom: 144px;
   }
 
