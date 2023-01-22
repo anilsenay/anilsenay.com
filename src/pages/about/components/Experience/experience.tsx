@@ -23,7 +23,7 @@ export default function Experience({}: Props) {
     <div className={styles.container}>
       <h3>Experience</h3>
       <div className={styles.content}>
-        <ExperienceItem timeline="2021 - Current" title="Cimri.com">
+        <ExperienceItem timeline="2021 - Current" title="Cimri">
           I worked as Front-end developer about 1 year then I joined Back-end
           team. I experienced in React, Next, GraphQL when I was in Front-end
           and I’m currently using Golang and having experience in micro

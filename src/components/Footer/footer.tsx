@@ -30,21 +30,17 @@ export default function Footer({}: Props) {
           <TwitterIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
         </a>
         <a
-          href="https://twitter.com/anilsenay"
+          href="https://instagram.com/anilsenay"
           target="_blank"
           rel="noreferrer"
         >
           <InstagramIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
         </a>
-        <a
-          href="https://twitter.com/anilsenay"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://github.com/anilsenay" target="_blank" rel="noreferrer">
           <GithubIcon fill={currentTheme === "dark" ? "#fff" : "#000"} />
         </a>
         <a
-          href="https://twitter.com/anilsenay"
+          href="https://linkedin.com/in/anilsenay"
           target="_blank"
           rel="noreferrer"
         >
