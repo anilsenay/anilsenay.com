@@ -1,0 +1,13 @@
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+
+  @include for-size(md) {
+    * + * {
+      margin-left: 36px;
+    }
+  }
+}

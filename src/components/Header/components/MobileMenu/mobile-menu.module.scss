@@ -1,0 +1,39 @@
+@import "@/styles/container.scss";
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
+
+.mobileNavigation {
+  display: flex;
+  @include for-size(lg) {
+    display: none;
+  }
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  will-change: transform;
+  transform: translateX(-100vw);
+  z-index: 99999;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    ul {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      padding-top: 50px;
+      margin-bottom: auto;
+    }
+  }
+}
