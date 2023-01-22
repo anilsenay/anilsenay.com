@@ -12,13 +12,16 @@ type NavLinkProps = {
   text: string;
   href: string;
   active: boolean;
+  darkMode: boolean;
 };
 
-function NavLink({ text, href, active }: NavLinkProps) {
+function NavLink({ text, href, active, darkMode }: NavLinkProps) {
   return (
     <Link
       href={href}
-      className={active ? `${styles.link} ${styles.active}` : styles.link}
+      className={`${styles.link} ${active ? styles.active : ""} ${
+        darkMode ? styles.dark : ""
+      }`}
     >
       {text}
     </Link>
@@ -44,6 +47,7 @@ export default function Header({}: Props) {
             text={item.title}
             href={item.path}
             active={router.pathname === item.path}
+            darkMode={currentTheme === "dark"}
           />
         ))}
       </nav>

@@ -8,6 +8,7 @@
 
     .link {
       @apply text-lg mr-12;
+      --bg: #000;
 
       position: relative;
       &::after {
@@ -18,7 +19,7 @@
         height: 1px;
         bottom: 0;
         left: 0;
-        background-color: #000;
+        background-color: var(--bg);
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
       }
@@ -26,6 +27,9 @@
         transform: scaleX(1);
         transform-origin: bottom left;
       }
+    }
+    .link.dark {
+      --bg: #fff;
     }
     .active {
       @apply font-bold underline underline-offset-4;
