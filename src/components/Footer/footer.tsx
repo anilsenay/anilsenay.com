@@ -22,7 +22,9 @@ export default function Footer({}: Props) {
   return (
     <footer className={styles.footer}>
       <p>All rights reserved © Anıl Şenay 2023</p>
-      <SocialMediaIcons theme={currentTheme} />
+      <div className={styles.iconsContainer}>
+        <SocialMediaIcons theme={currentTheme} />
+      </div>
     </footer>
   );
 }

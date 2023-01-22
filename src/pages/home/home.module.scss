@@ -33,7 +33,7 @@
   .title {
     @extend .gradient;
     font-size: 26px;
-    line-height: 32px;
+    line-height: 33px;
     @include for-size(md) {
       font-size: 60px;
       line-height: 82px;
