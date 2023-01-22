@@ -17,14 +17,16 @@
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
     transform: scaleX(0);
     height: 1px;
-    bottom: 0;
+    bottom: 2px;
     left: 0;
     background-color: var(--bg);
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+    @include for-size(md) {
+      width: 100%;
+    }
   }
   &:hover::after {
     transform: scaleX(1);
