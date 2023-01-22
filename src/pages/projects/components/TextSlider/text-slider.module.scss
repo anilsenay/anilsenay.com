@@ -64,21 +64,24 @@
 
 .slideLeft {
   animation-name: slideLeft;
-  animation-duration: 120s;
+  animation-duration: 180s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 .slideRight {
   animation-name: slideRight;
-  animation-duration: 120s;
+  animation-duration: 180s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 @keyframes slideRight {
   0% {
-    transform: translateX(-68%);
+    transform: translateX(-2500px);
+    @include for-size(md) {
+      transform: translateX(-3750px);
+    }
   }
 
   50% {
@@ -86,7 +89,10 @@
   }
 
   100% {
-    transform: translateX(-68%);
+    transform: translateX(-2500px);
+    @include for-size(md) {
+      transform: translateX(-3750px);
+    }
   }
 }
 @keyframes slideLeft {
@@ -95,7 +101,10 @@
   }
 
   50% {
-    transform: translateX(-68%);
+    transform: translateX(-2500px);
+    @include for-size(md) {
+      transform: translateX(-3750px);
+    }
   }
 
   100% {
