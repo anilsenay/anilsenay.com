@@ -1,19 +1,29 @@
 @import "@/styles/container.scss";
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
 
 .header {
   @extend .Container;
   display: flex;
   align-items: center;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding: 20px;
+  @include for-size(md) {
+    padding: 48px 0;
+  }
 
   nav {
     margin-right: auto;
+    display: flex;
+    align-items: center;
 
     .link {
       font-size: 18px;
       line-height: 28px;
-      margin-right: 48px;
+      margin-right: 24px;
+      // TODO: delete this after implement mobile nav
+      @include for-size(md) {
+        margin-right: 48px;
+      }
       --bg: #000;
 
       position: relative;
@@ -41,6 +51,14 @@
       font-weight: bold;
       text-decoration: underline;
       text-underline-offset: 4px;
+    }
+  }
+
+  .iconContainer {
+    cursor: pointer;
+    svg {
+      width: 36px;
+      height: 36px;
     }
   }
 }

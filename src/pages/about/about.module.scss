@@ -1,19 +1,39 @@
 @import "@/styles/colors.scss";
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
 
 .main {
-  margin: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
+  margin-top: 50px;
+  margin-bottom: 25px;
+  @include for-size(md) {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
   & > h1 {
     text-align: center;
+    margin-top: 20px;
+    @include for-size(md) {
+      margin-top: 0;
+    }
   }
 
   & > h3 {
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 300;
     text-align: center;
-    margin-top: 80px;
-    margin-bottom: 100px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    @include for-size(md) {
+      font-size: 30px;
+      line-height: 42px;
+      margin-top: 80px;
+      margin-bottom: 100px;
+    }
   }
 }

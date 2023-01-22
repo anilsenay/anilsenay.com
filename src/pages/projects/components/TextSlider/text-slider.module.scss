@@ -1,9 +1,15 @@
 @import "@/styles/colors.scss";
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
 
 .container {
-  height: 188px;
-  margin-bottom: 100px;
+  height: 120px;
+  margin-bottom: 20px;
   overflow: hidden;
+  @include for-size(md) {
+    height: 188px;
+    margin-bottom: 100px;
+  }
 
   .content {
     width: 100%;
@@ -14,19 +20,29 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    padding: 36px 0;
+    padding: 24px 0;
+    @include for-size(md) {
+      padding: 36px 0;
+    }
   }
 
   .slideItem {
     display: flex;
     white-space: nowrap;
-    font-size: 36px;
-    line-height: 48px;
+    font-size: 20px;
+    line-height: 28px;
     font-weight: 600;
     opacity: 0.4;
+    @include for-size(md) {
+      font-size: 36px;
+      line-height: 48px;
+    }
 
     & + .slideItem {
-      margin-top: 20px;
+      margin-top: 16px;
+      @include for-size(md) {
+        margin-top: 20px;
+      }
     }
 
     span {
@@ -37,8 +53,10 @@
         content: "•";
         color: #fff;
         border-radius: 100%;
-        margin-left: 18px;
-        margin-right: 18px;
+        margin: 0 12px;
+        @include for-size(md) {
+          margin: 0 18px;
+        }
       }
     }
   }

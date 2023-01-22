@@ -1,4 +1,5 @@
 @import "@/styles/reset.scss";
+@import "@/styles/fonts.scss";
 
 :root {
   /* Your default theme */
@@ -15,60 +16,4 @@
 .dark body {
   background: black;
   color: white;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-h1 {
-  font-size: 96px;
-  line-height: 96px;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-h4 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: bold;
-}
-
-h5 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: bold;
-}
-
-b {
-  font-weight: bold;
-}
-
-blockquote,
-dd,
-dl,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-p,
-pre {
-  margin: 0;
 }

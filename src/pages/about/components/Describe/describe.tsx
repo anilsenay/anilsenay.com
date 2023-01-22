@@ -16,7 +16,13 @@ export default function Describe({}: Props) {
 
   return (
     <div className={styles.describe}>
-      <span className={styles.sticky}>I describe myself as</span>
+      <span
+        className={`${styles.sticky} ${
+          currentTheme === "dark" ? styles.dark : ""
+        }`}
+      >
+        I describe myself as
+      </span>
       <div className={styles.texts}>
         <span
           style={{ color: currentTheme === "dark" ? "#F7DF1E" : undefined }}

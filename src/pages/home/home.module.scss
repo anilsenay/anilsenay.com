@@ -1,40 +1,71 @@
 @import "@/styles/colors.scss";
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
 
 .main {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  @include for-size(md) {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
 
   h1 {
-    font-size: 60px;
-    line-height: 82px;
+    font-size: 32px;
+    line-height: 44px;
     font-weight: bold;
     margin-bottom: 4px;
     width: fit-content;
+
+    @include for-size(md) {
+      font-size: 60px;
+      line-height: 82px;
+    }
   }
 
   h2 {
-    margin-top: 100px;
+    margin-top: 50px;
+    @include for-size(md) {
+      margin-top: 100px;
+    }
   }
 
   .title {
     @extend .gradient;
+    font-size: 26px;
+    line-height: 32px;
+    @include for-size(md) {
+      font-size: 60px;
+      line-height: 82px;
+    }
   }
   .title.dark {
     @extend .gradient-dark;
   }
 
   .subTitle {
-    font-size: 20px;
-    margin-top: 48px;
-    margin-bottom: 144px;
+    font-size: 18px;
+    margin-top: 44px;
+    margin-bottom: 100px;
+    @include for-size(md) {
+      font-size: 20px;
+      margin-top: 48px;
+      margin-bottom: 144px;
+    }
   }
 
   .about {
-    font-size: 36px;
-    line-height: 60px;
+    font-size: 24px;
+    line-height: 42px;
     font-weight: 300;
-    margin-top: 44px;
-    margin-bottom: 48px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    @include for-size(md) {
+      font-size: 36px;
+      line-height: 60px;
+      margin-top: 44px;
+      margin-bottom: 48px;
+    }
   }
 
   .connect {
@@ -42,17 +73,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 176px;
-    margin-top: 100px;
+    padding: 56px 22px;
+    margin-top: 50px;
     border-radius: 30px;
     background-color: $light-grey;
-    font-size: 36px;
-    line-height: 49px;
+    font-size: 24px;
+    line-height: 42px;
+    white-space: nowrap;
+    @include for-size(md) {
+      margin-top: 100px;
+      padding: 176px;
+      font-size: 36px;
+      line-height: 49px;
+    }
 
     a {
       color: $blue;
-      margin-top: 6px;
       position: relative;
+      @include for-size(md) {
+        margin-top: 6px;
+      }
 
       &::after {
         content: "";

@@ -1,19 +1,36 @@
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
+
 .container {
   display: flex;
-  margin-top: 100px;
+  margin-top: 50px;
+  flex-direction: column;
+
+  @include for-size(md) {
+    margin-top: 100px;
+    flex-direction: row;
+  }
 
   h3 {
-    width: 266px;
     flex-shrink: 0;
+    margin-bottom: 30px;
+    @include for-size(md) {
+      width: 266px;
+      margin-bottom: 0;
+    }
   }
 
   .links {
     display: flex;
     flex-direction: column;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 40px;
     text-decoration: underline;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+    @include for-size(md) {
+      font-size: 24px;
+      line-height: 40px;
+    }
 
     a + a {
       margin-top: 16px;

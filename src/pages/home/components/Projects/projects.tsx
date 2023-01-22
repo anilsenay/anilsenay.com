@@ -8,8 +8,12 @@ export default function Projects({}: Props) {
 
   useEffect(() => {
     const listener = () => {
-      if (window.scrollY < 1300) {
-        setTranslate(-window.scrollY / 2);
+      if (window.innerWidth >= 992) {
+        if (window.scrollY < 1300) {
+          setTranslate(-window.scrollY / 2);
+        }
+      } else {
+        setTranslate(-window.scrollY);
       }
     };
     window.addEventListener("scroll", listener);

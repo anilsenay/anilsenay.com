@@ -28,9 +28,7 @@ export default function ProjectsPage({}: Props) {
       <Layout>
         <main className={styles.main}>
           <h1>projects</h1>
-          <h3>
-            Some of my personal projects in <b>Github</b>
-          </h3>
+          <h3>Some of my personal projects</h3>
           <TextSlider textOpacity={currentTheme === "light" ? 0.4 : 0.2} />
           <div className={styles.projects}>
             <Project theme={currentTheme} />

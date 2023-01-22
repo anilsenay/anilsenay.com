@@ -52,7 +52,7 @@ export default function Header({}: Props) {
         ))}
       </nav>
       <div
-        style={{ cursor: "pointer" }}
+        className={styles.iconContainer}
         onClick={() => setTheme(currentTheme === "light" ? "dark" : "light")}
       >
         {currentTheme === "light" ? <SunIcon /> : <MoonIcon />}

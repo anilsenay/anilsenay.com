@@ -1,0 +1,71 @@
+@import "@/styles/breakpoints.scss";
+@import "@/styles/_variables.scss";
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 66px;
+  font-weight: 800;
+
+  @include for-size(md) {
+    line-height: 96px;
+    font-size: 96px;
+  }
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: bold;
+  @include for-size(md) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: bold;
+  white-space: nowrap;
+  @include for-size(md) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+b {
+  font-weight: bold;
+}
+
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+pre {
+  margin: 0;
+}
