@@ -1,7 +1,3 @@
-import GithubIcon from "@/assets/github";
-import InstagramIcon from "@/assets/instagram";
-import LinkedinIcon from "@/assets/linkedin";
-import TwitterIcon from "@/assets/twitter";
 import { useTheme } from "next-themes";
 import React, { useEffect, useState } from "react";
 import SocialMediaIcons from "../SocialMediaIcons";

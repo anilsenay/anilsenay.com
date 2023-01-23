@@ -1,7 +1,4 @@
-@import "@/styles/container.scss";
-@import "@/styles/breakpoints.scss";
-@import "@/styles/_variables.scss";
-
+@import "@/styles/base.scss";
 .header {
   @extend .Container;
   display: flex;

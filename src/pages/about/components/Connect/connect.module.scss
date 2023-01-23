@@ -1,5 +1,4 @@
-@import "@/styles/breakpoints.scss";
-@import "@/styles/_variables.scss";
+@import "@/styles/base.scss";
 
 .container {
   display: flex;
@@ -11,7 +10,7 @@
     flex-direction: row;
   }
 
-  h3 {
+  h4 {
     flex-shrink: 0;
     margin-bottom: 30px;
     @include for-size(md) {

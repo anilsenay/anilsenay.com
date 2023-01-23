@@ -21,7 +21,7 @@ function ExperienceItem({ timeline, title, children }: ExperienceItemProps) {
 export default function Experience({}: Props) {
   return (
     <div className={styles.container}>
-      <h3>Experience</h3>
+      <h4>Experience</h4>
       <div className={styles.content}>
         <ExperienceItem timeline="2021 - Current" title="Cimri">
           I worked as Front-end developer about 1 year then I joined Back-end

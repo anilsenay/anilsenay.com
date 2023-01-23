@@ -1,6 +1,4 @@
-@import "@/styles/colors.scss";
-@import "@/styles/breakpoints.scss";
-@import "@/styles/_variables.scss";
+@import "@/styles/base.scss";
 
 .project {
   display: flex;
@@ -8,7 +6,7 @@
   align-items: center;
   margin-bottom: 20px;
   @include for-size(md) {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .imageContainer {
@@ -86,15 +84,16 @@
     }
     .titleContainer {
       display: flex;
+      justify-content: space-between;
       width: 100%;
-      margin: 24px 0;
+      margin: 20px 0;
       font-size: 14px;
       line-height: 18px;
       font-weight: bold;
-
-      span {
-        margin-right: auto;
+      @include for-size(md) {
+        margin: 32px 0;
       }
+
       .starText {
         display: flex;
 

@@ -42,11 +42,11 @@ export default function HomePage({}: Props) {
               <b>@Cimri</b>
             </a>
           </p>
-          <h2>Selected Projects</h2>
+          <h3>Selected Projects</h3>
           <Projects />
           <CtaLink text="See others" href="/projects" full />
 
-          <h2>About</h2>
+          <h3>About</h3>
           <p className={styles.about}>
             I&apos;ve been interested in computers and programming since my
             childhood. Coding and design, which I started with curiosity and

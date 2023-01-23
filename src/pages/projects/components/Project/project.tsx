@@ -24,10 +24,10 @@ export default function Project({ theme }: Props) {
       </div>
       <div className={styles.content}>
         <div className={styles.titleContainer}>
-          <span>Project Name</span>
+          <h6>Project Name</h6>
           <div className={styles.starText}>
             <StarIcon />
-            <span>120</span>
+            <h6>120</h6>
           </div>
         </div>
         <p>
