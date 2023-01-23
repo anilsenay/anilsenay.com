@@ -6,7 +6,7 @@ type Props = {};
 export default function AboutMe({}: Props) {
   return (
     <div className={styles.container}>
-      <h3>About Me</h3>
+      <h4>About Me</h4>
       <div className={styles.text}>
         <p>
           Hi, I am Anıl. I am a software engineer at Cimri.

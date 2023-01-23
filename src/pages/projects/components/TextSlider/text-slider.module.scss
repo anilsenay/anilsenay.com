@@ -1,6 +1,4 @@
-@import "@/styles/colors.scss";
-@import "@/styles/breakpoints.scss";
-@import "@/styles/_variables.scss";
+@import "@/styles/base.scss";
 
 .container {
   height: 120px;
@@ -8,7 +6,7 @@
   overflow: hidden;
   @include for-size(md) {
     height: 188px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 
   .content {

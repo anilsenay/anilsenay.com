@@ -1,6 +1,4 @@
-@import "@/styles/colors.scss";
-@import "@/styles/breakpoints.scss";
-@import "@/styles/_variables.scss";
+@import "@/styles/base.scss";
 
 .container {
   height: 240px;
@@ -10,7 +8,7 @@
   @include for-size(md) {
     height: 400px;
     margin-top: 44px;
-    margin-bottom: 48px;
+    margin-bottom: 44px;
   }
 
   .content {
