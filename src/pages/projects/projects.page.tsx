@@ -31,10 +31,30 @@ export default function ProjectsPage({}: Props) {
           <h2>Some of my personal projects</h2>
           <TextSlider textOpacity={currentTheme === "light" ? 0.4 : 0.2} />
           <div className={styles.projects}>
-            <Project theme={currentTheme} />
-            <Project theme={currentTheme} />
-            <Project theme={currentTheme} />
-            <Project theme={currentTheme} />
+            <Project
+              theme={currentTheme}
+              videoSrc={require("@/assets/project_videos/next-e-commerce.mp4")}
+            />
+            <Project
+              theme={currentTheme}
+              videoSrc={require("@/assets/project_videos/swagno.mp4")}
+            />
+            <Project
+              theme={currentTheme}
+              videoSrc={require("@/assets/project_videos/catchup.mp4")}
+            />
+            <Project
+              theme={currentTheme}
+              videoSrc={require("@/assets/project_videos/change-my-mind.mp4")}
+            />
+            <Project
+              theme={currentTheme}
+              videoSrc={require("@/assets/project_videos/react-food-spin.mp4")}
+            />
+            <Project
+              theme={currentTheme}
+              videoSrc={require("@/assets/project_videos/react-native-shopping.mp4")}
+            />
           </div>
         </main>
       </Layout>

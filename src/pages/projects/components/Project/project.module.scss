@@ -37,10 +37,11 @@
           opacity: 1;
           background: $gradient-light;
           inset: 2px;
-          border-radius: 30px;
+          border-radius: 29px;
         }
 
-        .placeholder {
+        .placeholder,
+        video {
           transform: scale(0.98);
         }
       }
@@ -60,6 +61,14 @@
         border-radius: 25px;
         background: $grey;
         transition: transform 400ms ease;
+      }
+
+      video {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        transition: transform 400ms ease;
+        object-fit: cover;
       }
     }
     .imageDark {

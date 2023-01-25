@@ -4,9 +4,10 @@ import styles from "./project.module.scss";
 
 type Props = {
   theme?: string | undefined;
+  videoSrc?: string;
 };
 
-export default function Project({ theme }: Props) {
+export default function Project({ theme, videoSrc }: Props) {
   return (
     <div className={styles.project}>
       <div
@@ -18,7 +19,13 @@ export default function Project({ theme }: Props) {
             theme === "dark" ? styles.imageDark : ""
           }`}
         >
-          <div className={styles.placeholder} />
+          {videoSrc ? (
+            <video autoPlay loop muted playsInline>
+              <source src={videoSrc} type="video/mp4" />
+            </video>
+          ) : (
+            <div className={styles.placeholder} />
+          )}
           <div className={styles.background} />
         </div>
       </div>
