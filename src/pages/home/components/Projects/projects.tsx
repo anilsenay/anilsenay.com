@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./projects.module.scss";
+import Image from "next/image";
+import {
+  projectImage1,
+  projectImage2,
+  projectImage3,
+  projectImage4,
+} from "@/assets/project_banners";
 
 type Props = {};
 
@@ -31,10 +38,34 @@ export default function Projects({}: Props) {
             transform: `translateX(${translate}px) `,
           }}
         >
-          <div className={styles.projectItem} />
-          <div className={styles.projectItem} />
-          <div className={styles.projectItem} />
-          <div className={styles.projectItem} />
+          <div className={styles.projectItem}>
+            <Image
+              src={projectImage2}
+              alt="https://github.com/go-swagno/swagno"
+              placeholder="blur"
+            />
+          </div>
+          <div className={styles.projectItem}>
+            <Image
+              src={projectImage1}
+              alt="github.com/anilsenay/next-e-commerce"
+              placeholder="blur"
+            />
+          </div>
+          <div className={styles.projectItem}>
+            <Image
+              src={projectImage3}
+              alt="CatchUp Figma Design"
+              placeholder="blur"
+            />
+          </div>
+          <div className={styles.projectItem}>
+            <Image
+              src={projectImage4}
+              alt="github.com/anilsenay"
+              placeholder="blur"
+            />
+          </div>
         </div>
       </div>
     </div>
