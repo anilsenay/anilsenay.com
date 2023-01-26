@@ -121,4 +121,25 @@
   .connect.dark {
     background-color: $dark-grey;
   }
+
+  .background {
+    position: fixed;
+    opacity: 0.8;
+    height: 450px;
+    width: 700px;
+    left: -120px;
+    top: -45px;
+    @include for-size(md) {
+      height: auto;
+      width: auto;
+      left: -40px;
+      top: -10px;
+    }
+    @include for-size(lg) {
+      left: 100px;
+    }
+    @include for-size(xl) {
+      left: 200px;
+    }
+  }
 }

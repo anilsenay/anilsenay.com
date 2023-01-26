@@ -6,6 +6,8 @@ import CtaLink from "@/components/CtaLink";
 import Link from "next/link";
 import Projects from "./components/Projects";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import BlurryBackground from "@/assets/blurry-bg.png";
 
 type Props = {};
 
@@ -28,6 +30,11 @@ export default function HomePage({}: Props) {
       </Head>
       <Layout>
         <main className={styles.main}>
+          <Image
+            src={BlurryBackground}
+            alt="Blurry Background"
+            className={styles.background}
+          />
           <h1>Hey, I am Anıl</h1>
           <h1
             className={`${styles.title} ${
