@@ -33,6 +33,7 @@ export default function HomePage({}: Props) {
           <Image
             src={BlurryBackground}
             alt="Blurry Background"
+            priority
             className={styles.background}
           />
           <h1>Hey, I am Anıl</h1>
