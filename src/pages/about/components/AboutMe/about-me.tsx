@@ -13,7 +13,7 @@ export default function AboutMe({}: Props) {
           <br />
           <br />
           I graduated from Marmara University Computer Science & Engineering at
-          2022. I&apos;ve been interested in computers and programming since my
+          2022. I've been interested in computers and programming since my
           childhood. Coding and design, which I started with curiosity and
           passion, is now a big part of my life.
           <br />

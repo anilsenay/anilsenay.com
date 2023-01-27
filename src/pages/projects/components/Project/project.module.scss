@@ -70,6 +70,38 @@
         transition: transform 400ms ease;
         object-fit: cover;
       }
+
+      .button {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        padding: 10px 15px;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-radius: 100px;
+        background-color: rgba($color: #000, $alpha: 0.2);
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        transition: background-color 200ms ease;
+        @include for-size(md) {
+          font-size: 14px;
+          right: 20px;
+          bottom: 20px;
+        }
+
+        svg {
+          width: 12px;
+          height: 12px;
+          margin-left: 5px;
+          @include for-size(md) {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
     }
     .imageDark {
       background: #282828;
@@ -94,6 +126,7 @@
     .titleContainer {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
       margin: 20px 0;
       font-size: 14px;
@@ -118,9 +151,19 @@
       word-spacing: 4.5px;
       letter-spacing: 0.7px;
       text-align: justify;
+      margin-bottom: 24px;
       @include for-size(md) {
         font-size: 16px;
         line-height: 24px;
+        margin-bottom: 30px;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 32px;
+      li {
+        margin-top: 12px;
       }
     }
   }

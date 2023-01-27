@@ -3,8 +3,13 @@ import Head from "next/head";
 import styles from "./projects.module.scss";
 import Layout from "@/components/Layout";
 import TextSlider from "./components/TextSlider";
-import Project from "./components/Project";
 import { useTheme } from "next-themes";
+import NextECommerce from "./projects/next-e-commerce";
+import Swagno from "./projects/swagno";
+import Catchup from "./projects/catchup";
+import ChangeMyMind from "./projects/change-my-mind";
+import ReactNativeShopping from "./projects/react-native-shopping";
+import CtaLink from "@/components/CtaLink";
 
 type Props = {};
 
@@ -31,31 +36,20 @@ export default function ProjectsPage({}: Props) {
           <h2>Some of my personal projects</h2>
           <TextSlider textOpacity={currentTheme === "light" ? 0.4 : 0.2} />
           <div className={styles.projects}>
-            <Project
+            <NextECommerce name="Next E-Commerce" theme={currentTheme} />
+            <Swagno name="Swagno" theme={currentTheme} />
+            <Catchup name="Catchup Figma Design" theme={currentTheme} />
+            <ChangeMyMind name="Change My Mind" theme={currentTheme} />
+            <ReactNativeShopping
+              name="React Native Shopping App"
               theme={currentTheme}
-              videoSrc={require("@/assets/project_videos/next-e-commerce.mp4")}
-            />
-            <Project
-              theme={currentTheme}
-              videoSrc={require("@/assets/project_videos/swagno.mp4")}
-            />
-            <Project
-              theme={currentTheme}
-              videoSrc={require("@/assets/project_videos/catchup.mp4")}
-            />
-            <Project
-              theme={currentTheme}
-              videoSrc={require("@/assets/project_videos/change-my-mind.mp4")}
-            />
-            <Project
-              theme={currentTheme}
-              videoSrc={require("@/assets/project_videos/react-food-spin.mp4")}
-            />
-            <Project
-              theme={currentTheme}
-              videoSrc={require("@/assets/project_videos/react-native-shopping.mp4")}
             />
           </div>
+          <CtaLink
+            href="https://github.com/anilsenay"
+            text="Check out my Github for more!"
+            full
+          />
         </main>
       </Layout>
     </>

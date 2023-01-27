@@ -56,7 +56,7 @@ export default function HomePage({}: Props) {
 
           <h3>About</h3>
           <p className={styles.about}>
-            I&apos;ve been interested in computers and programming since my
+            I've been interested in computers and programming since my
             childhood. Coding and design, which I started with curiosity and
             passion, are now a big part of my life. I am interested in{" "}
             <b>JavaScript</b> and <b>Golang</b> mostly.
@@ -68,7 +68,7 @@ export default function HomePage({}: Props) {
             }`}
           >
             <p>Feel free to reach out to me</p>
-            <Link href="/about#connect">Let&apos;s Connect</Link>
+            <Link href="/about#connect">Let's Connect</Link>
           </div>
         </main>
       </Layout>
