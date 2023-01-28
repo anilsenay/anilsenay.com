@@ -46,8 +46,6 @@ export default function Project({
     };
   }, [repo]);
 
-  console.log("repoData", repoData);
-
   return (
     <div className={styles.project}>
       <div
@@ -60,7 +58,7 @@ export default function Project({
           }`}
         >
           {videoSrc ? (
-            <video autoPlay loop muted playsInline>
+            <video autoPlay loop muted playsInline preload="auto">
               <source src={videoSrc} type="video/mp4" />
             </video>
           ) : (
