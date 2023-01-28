@@ -14,7 +14,7 @@ export default function ChangeMyMind({ name, theme }: Props) {
       url="https://github.com/anilsenay/Change-My-Mind"
       repo="anilsenay/Change-My-Mind"
       theme={theme}
-      videoSrc={require("@/assets/project_videos/change-my-mind.mp4")}
+      videoSrc="change-my-mind"
       buttonText="Source Code"
       buttonIconComponent={<GithubIcon fill="#fff" />}
     >

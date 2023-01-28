@@ -13,7 +13,7 @@ export default function Catchup({ name, theme }: Props) {
       name={name}
       url="https://www.figma.com/community/file/1200181885987810296"
       theme={theme}
-      videoSrc={require("@/assets/project_videos/catchup.mp4")}
+      videoSrc="catchup"
       buttonText="Figma Design"
       buttonIconComponent={<FigmaIcon />}
     >

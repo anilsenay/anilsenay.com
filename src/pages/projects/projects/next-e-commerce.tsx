@@ -14,7 +14,7 @@ export default function NextECommerce({ name, theme }: Props) {
       url="https://github.com/anilsenay/next-e-commerce"
       repo="anilsenay/next-e-commerce"
       theme={theme}
-      videoSrc={require("@/assets/project_videos/next-e-commerce.mp4")}
+      videoSrc="next-e-commerce"
       buttonText="Source Code"
       buttonIconComponent={<GithubIcon fill="#fff" />}
     >
