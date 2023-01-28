@@ -4,7 +4,7 @@ const pages = [
     title: "Home",
     metadata: {
       title: "Anıl Şenay",
-      description: "",
+      description: "Anıl Şenay Personal Website",
     },
   },
   {
@@ -12,7 +12,7 @@ const pages = [
     title: "Projects",
     metadata: {
       title: "Projects | Anıl Şenay",
-      description: "",
+      description: "Some of my personal projects in Github",
     },
   },
   {
@@ -20,7 +20,8 @@ const pages = [
     title: "About",
     metadata: {
       title: "About | Anıl Şenay",
-      description: "",
+      description:
+        "Software Engineer, JavaScript Enthusiast, Software Craftsman, React Lover, Gopher, Gamer, Geek",
     },
   },
 ];
