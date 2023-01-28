@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./experience.module.scss";
 
 type Props = {};
+
 type ExperienceItemProps = {
   timeline: string;
   title: string;

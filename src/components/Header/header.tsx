@@ -8,11 +8,6 @@ import HamburgerIcon from "@/assets/hamburger";
 import NavLink from "./components/NavLink";
 import MobileMenu from "./components/MobileMenu";
 
-type pageData = {
-  title: string;
-  path: string;
-};
-
 type Props = {
   pages: pageData[];
 };
@@ -54,7 +49,7 @@ export default function Header({ pages }: Props) {
           <HamburgerIcon fill={currentTheme === "light" ? "#000" : "#fff"} />
         </div>
         <nav>
-          {pages.map((item: { title: string; path: string }) => (
+          {pages.map((item: pageData) => (
             <NavLink
               key={item.path}
               text={item.title}
@@ -72,6 +67,7 @@ export default function Header({ pages }: Props) {
         </div>
       </header>
       <MobileMenu
+        pages={pages}
         toggleMobileMenu={toggleMobileMenu}
         setToggleMobileMenu={setToggleMobileMenu}
       />

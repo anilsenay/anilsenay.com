@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import CloseIcon from "@/assets/close";
 import styles from "./mobile-menu.module.scss";
 import NavLink from "../NavLink";
-import { navigation } from "@/consts/app-config";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/router";
 import SocialMediaIcons from "@/components/SocialMediaIcons";
@@ -10,9 +9,11 @@ import SocialMediaIcons from "@/components/SocialMediaIcons";
 type Props = {
   toggleMobileMenu: boolean;
   setToggleMobileMenu: (b: boolean) => void;
+  pages: pageData[];
 };
 
 export default function MobileMenu({
+  pages,
   toggleMobileMenu,
   setToggleMobileMenu,
 }: Props) {
@@ -57,7 +58,7 @@ export default function MobileMenu({
           onClick={() => setToggleMobileMenu(false)}
         />
         <ul>
-          {navigation.map((item: { title: string; path: string }) => (
+          {pages.map((item: pageData) => (
             <NavLink
               key={item.path}
               text={item.title}
