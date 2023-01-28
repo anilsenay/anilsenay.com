@@ -24,7 +24,9 @@ export default function MobileMenu({
   useEffect(() => {
     setToggleMobileMenu(false);
     document.body.style.overflow = "auto";
-    window.scrollTo(0, 0);
+    if (!router.asPath.includes("#")) {
+      window.scrollTo(0, 0);
+    }
     return () => {
       setToggleMobileMenu(false);
     };

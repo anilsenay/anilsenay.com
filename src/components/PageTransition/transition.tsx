@@ -1,5 +1,5 @@
-import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 
 type Props = {
   path: string;
@@ -27,6 +27,12 @@ const variants = {
 };
 
 export default function PageTransition({ path, children }: Props) {
+  if (path.includes("#")) {
+    setTimeout(() => {
+      scroll({ top: 2000, behavior: "smooth" });
+    }, 30);
+  }
+
   return (
     <motion.div
       key={path}

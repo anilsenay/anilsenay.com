@@ -17,10 +17,6 @@ export default function Layout({ children }: Props) {
   const { asPath } = useRouter();
   const currentPage = pages.find((i) => i.path === asPath);
 
-  path = currentPage
-    ? currentPage.path
-    : Math.random().toString(36).slice(2, 7); //random string
-
   const title = currentPage?.metadata.title || "Anıl Şenay";
   const description =
     currentPage?.metadata.description || "Anıl Şenay Personal Website";
@@ -43,7 +39,7 @@ export default function Layout({ children }: Props) {
         <meta name="twitter:description" content={description} />
       </Head>
       <Header pages={pages} />
-      <PageTransition path={path}>
+      <PageTransition path={asPath}>
         <Container>{children}</Container>
       </PageTransition>
       <Footer />
