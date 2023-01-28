@@ -76,7 +76,7 @@
 
 @keyframes slideRight {
   0% {
-    transform: translateX(-2500px);
+    transform: translateX(-1900px);
     @include for-size(md) {
       transform: translateX(-3750px);
     }
@@ -87,7 +87,7 @@
   }
 
   100% {
-    transform: translateX(-2500px);
+    transform: translateX(-1900px);
     @include for-size(md) {
       transform: translateX(-3750px);
     }
@@ -99,7 +99,7 @@
   }
 
   50% {
-    transform: translateX(-2500px);
+    transform: translateX(-1900px);
     @include for-size(md) {
       transform: translateX(-3750px);
     }
