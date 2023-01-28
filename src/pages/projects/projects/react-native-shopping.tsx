@@ -4,16 +4,15 @@ import Project from "../components/Project";
 
 type Props = {
   name: string;
-  star?: number;
   theme?: string;
 };
 
-export default function ReactNativeShopping({ name, star, theme }: Props) {
+export default function ReactNativeShopping({ name, theme }: Props) {
   return (
     <Project
       name={name}
       url="https://github.com/anilsenay/React-Native-Shopping-App"
-      star={star}
+      repo="anilsenay/React-Native-Shopping-App"
       theme={theme}
       videoSrc={require("@/assets/project_videos/react-native-shopping.mp4")}
       buttonText="Source Code"

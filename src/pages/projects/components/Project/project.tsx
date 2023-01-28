@@ -1,12 +1,12 @@
 import GithubIcon from "@/assets/github";
 import StarIcon from "@/assets/star";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./project.module.scss";
 
 type Props = {
   name: string;
   url?: string;
-  star?: number | undefined;
+  repo?: string;
   theme?: string | undefined;
   videoSrc?: string;
   buttonText?: string;
@@ -14,16 +14,40 @@ type Props = {
   children?: JSX.Element;
 };
 
+type repositoryData = {
+  stargazers_count: number;
+};
+
 export default function Project({
   name,
   url,
-  star,
+  repo,
   theme,
   videoSrc,
   buttonText,
   buttonIconComponent,
   children,
 }: Props) {
+  const [repoData, setRepoData] = useState<repositoryData | null>(null);
+
+  useEffect(() => {
+    const fn = async () => {
+      if (repo && repo.length > 0) {
+        const res = await fetch(`https://api.github.com/repos/` + repo);
+        const data = await res.json();
+        setRepoData(data);
+      }
+    };
+
+    fn();
+
+    return () => {
+      setRepoData(null);
+    };
+  }, [repo]);
+
+  console.log("repoData", repoData);
+
   return (
     <div className={styles.project}>
       <div
@@ -59,10 +83,10 @@ export default function Project({
         <div className={styles.titleContainer}>
           <h6>{name}</h6>
           <div className={styles.starText}>
-            {star && star > 0 && (
+            {repoData && (
               <>
                 <StarIcon />
-                <h6>{star}</h6>
+                <h6>{repoData.stargazers_count}</h6>
               </>
             )}
           </div>

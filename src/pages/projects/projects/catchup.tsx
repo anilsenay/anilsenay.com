@@ -4,16 +4,14 @@ import Project from "../components/Project";
 
 type Props = {
   name: string;
-  star?: number;
   theme?: string;
 };
 
-export default function Catchup({ name, star, theme }: Props) {
+export default function Catchup({ name, theme }: Props) {
   return (
     <Project
       name={name}
       url="https://www.figma.com/community/file/1200181885987810296"
-      star={star}
       theme={theme}
       videoSrc={require("@/assets/project_videos/catchup.mp4")}
       buttonText="Figma Design"

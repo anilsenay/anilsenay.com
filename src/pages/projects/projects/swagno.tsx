@@ -4,16 +4,15 @@ import Project from "../components/Project";
 
 type Props = {
   name: string;
-  star?: number;
   theme?: string;
 };
 
-export default function Swagno({ name, star, theme }: Props) {
+export default function Swagno({ name, theme }: Props) {
   return (
     <Project
       name={name}
       url="https://github.com/go-swagno/swagno"
-      star={star}
+      repo="go-swagno/swagno"
       theme={theme}
       videoSrc={require("@/assets/project_videos/swagno.mp4")}
       buttonText="Source Code"

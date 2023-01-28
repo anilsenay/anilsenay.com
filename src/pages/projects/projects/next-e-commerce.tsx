@@ -4,16 +4,15 @@ import Project from "../components/Project";
 
 type Props = {
   name: string;
-  star?: number;
   theme?: string;
 };
 
-export default function NextECommerce({ name, star, theme }: Props) {
+export default function NextECommerce({ name, theme }: Props) {
   return (
     <Project
       name={name}
       url="https://github.com/anilsenay/next-e-commerce"
-      star={star}
+      repo="anilsenay/next-e-commerce"
       theme={theme}
       videoSrc={require("@/assets/project_videos/next-e-commerce.mp4")}
       buttonText="Source Code"

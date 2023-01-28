@@ -4,16 +4,15 @@ import Project from "../components/Project";
 
 type Props = {
   name: string;
-  star?: number;
   theme?: string;
 };
 
-export default function ChangeMyMind({ name, star, theme }: Props) {
+export default function ChangeMyMind({ name, theme }: Props) {
   return (
     <Project
       name={name}
       url="https://github.com/anilsenay/Change-My-Mind"
-      star={star}
+      repo="anilsenay/Change-My-Mind"
       theme={theme}
       videoSrc={require("@/assets/project_videos/change-my-mind.mp4")}
       buttonText="Source Code"
