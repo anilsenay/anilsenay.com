@@ -19,8 +19,11 @@
 
     .image {
       position: relative;
-      width: 320px;
-      height: 206px;
+      width: 80vw;
+      height: auto;
+      @include for-size(tbl) {
+        width: 60vw;
+      }
       @include for-size(md) {
         width: 600px;
         height: 326px;
@@ -119,7 +122,10 @@
   }
 
   .content {
-    width: 320px;
+    width: 78vw;
+    @include for-size(tbl) {
+      width: 56vw;
+    }
     @include for-size(md) {
       width: 551px;
     }
