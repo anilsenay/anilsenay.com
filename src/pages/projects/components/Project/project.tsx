@@ -59,14 +59,7 @@ export default function Project({
         >
           {videoSrc ? (
             <video autoPlay loop muted playsInline preload="auto">
-              <source
-                src={"/project_videos/" + videoSrc + ".mp4"}
-                type="video/mp4"
-              />
-              <source
-                src={"/project_videos/" + videoSrc + "_600.mp4"}
-                type="video/mp4"
-              />
+              <source src={videoSrc} type="video/mp4" />
             </video>
           ) : (
             <div className={styles.placeholder} />

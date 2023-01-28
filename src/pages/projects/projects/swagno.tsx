@@ -14,7 +14,7 @@ export default function Swagno({ name, theme }: Props) {
       url="https://github.com/go-swagno/swagno"
       repo="go-swagno/swagno"
       theme={theme}
-      videoSrc="swagno"
+      videoSrc={require("@/assets/project_videos/swagno.mp4")}
       buttonText="Source Code"
       buttonIconComponent={<GithubIcon fill="#fff" />}
     >

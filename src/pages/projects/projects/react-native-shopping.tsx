@@ -14,7 +14,7 @@ export default function ReactNativeShopping({ name, theme }: Props) {
       url="https://github.com/anilsenay/React-Native-Shopping-App"
       repo="anilsenay/React-Native-Shopping-App"
       theme={theme}
-      videoSrc="react-native-shopping"
+      videoSrc={require("@/assets/project_videos/react-native-shopping.mp4")}
       buttonText="Source Code"
       buttonIconComponent={<GithubIcon fill="#fff" />}
     >
