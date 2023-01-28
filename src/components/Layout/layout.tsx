@@ -10,18 +10,20 @@ type Props = {
   children: JSX.Element;
 };
 
+let path: string;
+
 export default function Layout({ children }: Props) {
   const { asPath } = useRouter();
   const currentPage = pages.find((i) => i.path === asPath);
-  let path = currentPage?.path;
-  if (path === undefined) {
-    path = Math.random().toString(36).slice(2, 7); //random string
-  }
+
+  path = currentPage
+    ? currentPage.path
+    : Math.random().toString(36).slice(2, 7); //random string ;
 
   return (
     <>
       <Header pages={pages} />
-      <PageTransition key={path}>
+      <PageTransition path={path}>
         <Container>{children}</Container>
       </PageTransition>
       <Footer />

@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {
-  key: string;
+  path: string;
   children: JSX.Element;
 };
 
@@ -26,10 +26,10 @@ const variants = {
   },
 };
 
-export default function PageTransition({ key, children }: Props) {
+export default function PageTransition({ path, children }: Props) {
   return (
     <motion.div
-      key={key}
+      key={path}
       variants={variants}
       animate="in"
       initial="out"

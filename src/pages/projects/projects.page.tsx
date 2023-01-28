@@ -34,7 +34,7 @@ export default function ProjectsPage({}: Props) {
         <main className={styles.main}>
           <h1>projects</h1>
           <h2>Some of my personal projects</h2>
-          <TextSlider textOpacity={currentTheme === "light" ? 0.4 : 0.2} />
+          <TextSlider theme={currentTheme} />
           <div className={styles.projects}>
             <NextECommerce name="Next E-Commerce" theme={currentTheme} />
             <Swagno name="Swagno" theme={currentTheme} />

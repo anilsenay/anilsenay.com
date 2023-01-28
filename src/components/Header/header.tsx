@@ -24,21 +24,6 @@ export default function Header({ pages }: Props) {
 
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  if (typeof window !== "undefined") {
-    let header = document.getElementById("fixed-header");
-    const offset = window.innerWidth >= 1140 ? 400 : 250;
-    window.addEventListener("scroll", () => {
-      header = header || document.getElementById("fixed-header");
-      if (header != null) {
-        if (window.pageYOffset > offset) {
-          header.setAttribute("style", "transform: translateY(0)");
-        } else {
-          header.setAttribute("style", "transform: translateY(-100%)");
-        }
-      }
-    });
-  }
-
   return (
     <>
       <header className={styles.header}>
