@@ -37,27 +37,31 @@
     }
   }
 
-  .title {
-    @extend .gradient;
-    font-size: 26px;
-    line-height: 33px;
-    @include for-size(md) {
-      font-size: 60px;
-      line-height: 82px;
+  .titleContainer {
+    position: relative;
+    z-index: 1;
+    .title {
+      @extend .gradient;
+      font-size: 26px;
+      line-height: 33px;
+      @include for-size(md) {
+        font-size: 60px;
+        line-height: 82px;
+      }
     }
-  }
-  .title.dark {
-    @extend .gradient-dark;
-  }
+    .title.dark {
+      @extend .gradient-dark;
+    }
 
-  .subTitle {
-    font-size: 18px;
-    margin-top: 44px;
-    margin-bottom: 100px;
-    @include for-size(md) {
-      font-size: 20px;
-      margin-top: 48px;
-      margin-bottom: 148px;
+    .subTitle {
+      font-size: 18px;
+      margin-top: 44px;
+      margin-bottom: 100px;
+      @include for-size(md) {
+        font-size: 20px;
+        margin-top: 48px;
+        margin-bottom: 148px;
+      }
     }
   }
 
@@ -123,23 +127,27 @@
   }
 
   .background {
-    position: fixed;
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
     opacity: 0.8;
     height: 450px;
     width: 700px;
-    left: -120px;
-    top: -45px;
+    left: -150px;
+    top: -170px;
     @include for-size(md) {
       height: auto;
       width: auto;
-      left: -40px;
-      top: -10px;
+      top: -240px;
+      left: -100px;
     }
     @include for-size(lg) {
-      left: 100px;
+      top: -240px;
+      left: -60px;
     }
     @include for-size(xl) {
-      left: 200px;
+      top: -240px;
+      left: -150px;
     }
   }
 }
