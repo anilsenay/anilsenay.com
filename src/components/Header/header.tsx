@@ -3,15 +3,21 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import styles from "./header.module.scss";
 import { useTheme } from "next-themes";
-import { navigation } from "@/consts/app-config";
 import MoonIcon from "@/assets/moon";
 import HamburgerIcon from "@/assets/hamburger";
 import NavLink from "./components/NavLink";
 import MobileMenu from "./components/MobileMenu";
 
-type Props = {};
+type pageData = {
+  title: string;
+  path: string;
+};
 
-export default function Header({}: Props) {
+type Props = {
+  pages: pageData[];
+};
+
+export default function Header({ pages }: Props) {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
   const { theme, systemTheme, setTheme } = useTheme();
@@ -48,7 +54,7 @@ export default function Header({}: Props) {
           <HamburgerIcon fill={currentTheme === "light" ? "#000" : "#fff"} />
         </div>
         <nav>
-          {navigation.map((item: { title: string; path: string }) => (
+          {pages.map((item: { title: string; path: string }) => (
             <NavLink
               key={item.path}
               text={item.title}
