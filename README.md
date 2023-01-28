@@ -1,4 +1,4 @@
-## My Personal Website
+# My Personal Website
 
 I wanted to redesign my current website. It had 'blog' feature which I never posted anything :D. So I decided to build a _simple_ website with my personal information and my projects. To achieve this, I designed pages and components with Figma and then I started to code. I used Next but actually I did not use the real power of Next while I was not using server-side fetching, server components etc. So perhaps this site would be better suited as an SPA. But for the future, Next will be better for development if I want to add more features which required something on server side.
 
