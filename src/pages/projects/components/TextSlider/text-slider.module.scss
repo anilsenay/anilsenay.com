@@ -118,6 +118,7 @@
 }
 .customCursor {
   opacity: 0;
+  z-index: 1000000;
   top: -25px;
   left: -25px;
   position: fixed;

@@ -37,30 +37,17 @@ export default function TextSlider({ theme }: Props) {
       document.getElementById("custom-cursor")!.style.transform =
         "translate(" + event.clientX + "px," + event.clientY + "px)";
     };
-    const handleTouchMove = (event: TouchEvent) => {
-      if (!element) {
-        element = document?.getElementById("custom-cursor");
-      }
-      document.getElementById("custom-cursor")!.style.transform =
-        "translate(" +
-        event.touches[0].clientX +
-        "px," +
-        event.touches[0].clientY +
-        "px)";
-    };
 
     if (window.innerWidth >= 992) {
       window.addEventListener("mousemove", handleMouseMove);
-    } else {
-      window.addEventListener("touchmove", handleTouchMove);
     }
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, []);
 
+  // easter egg
   const handleClick = () => {
     document.body.style.cursor = showCustomCursor ? "initial" : "none";
     setShowCustomCursor((s) => !s);
