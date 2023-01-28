@@ -2,6 +2,7 @@ import "@/styles/globals.scss";
 import type { AppProps } from "next/app";
 import { Manrope } from "@next/font/google";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/react";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <ThemeProvider attribute="class">
         <Component {...pageProps} />
       </ThemeProvider>
+      <Analytics />
     </>
   );
 }
