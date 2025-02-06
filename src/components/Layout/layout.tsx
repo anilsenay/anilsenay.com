@@ -17,15 +17,14 @@ export default function Layout({ children }: Props) {
   const { asPath } = useRouter();
   const currentPage = pages.find((i) => i.path === asPath);
 
-  const title = currentPage?.metadata.title || "Anıl Şenay";
-  const description =
-    currentPage?.metadata.description || "Anıl Şenay Personal Website";
+  const title = "Anıl Şenay";
+  const description = "Anıl Şenay Personal Website";
 
   return (
     <>
       <Head>
-        <title>{currentPage?.metadata.title || "Anıl Şenay"}</title>
-        <meta name="description" content={currentPage?.metadata.description} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="canonical" href="https://anilsenay.com" />

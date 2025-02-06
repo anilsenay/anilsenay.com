@@ -10,7 +10,6 @@
 
   nav {
     margin-right: auto;
-    display: none;
     align-items: center;
     @include for-size(md) {
       display: flex;

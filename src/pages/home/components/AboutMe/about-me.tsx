@@ -6,7 +6,7 @@ type Props = {};
 export default function AboutMe({}: Props) {
   return (
     <div className={styles.container}>
-      <h4>About Me</h4>
+      <h4 id="about">About Me</h4>
       <div className={styles.text}>
         <p>
           Hi, I am Anıl. I am a software engineer at Cimri.
@@ -23,13 +23,17 @@ export default function AboutMe({}: Props) {
           in my daily life.
           <br />
           <br />
-          I took the first step into the software world with web designing at my
-          early ages. After dealing with web design for a few years, I had not
-          do any development on the web for a long time. In recent years, I am
-          working as developer professionally.
+          I am mainly interested in front-end development by using React, React
+          Native and back-end development by using Golang.
           <br />
-          <br />I am mainly interested in front-end development by using React,
-          React Native and back-end development by using Golang.
+          <br />
+          As a software developer, my primary focus is building efficient and
+          scalable applications that provide a seamless user experience.
+          <br />
+          <br />
+          My expertise also extends to system architecture, backend development,
+          and optimizing performance to ensure every component is both robust
+          and maintainable.
         </p>
       </div>
     </div>

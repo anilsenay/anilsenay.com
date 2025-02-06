@@ -27,12 +27,6 @@ export default function Header({ pages }: Props) {
   return (
     <>
       <header className={styles.header}>
-        <div
-          className={styles.mobileMenuButton}
-          onClick={() => setToggleMobileMenu(true)}
-        >
-          <HamburgerIcon fill={currentTheme === "light" ? "#000" : "#fff"} />
-        </div>
         <nav>
           {pages.map((item: pageData) => (
             <NavLink
@@ -51,11 +45,6 @@ export default function Header({ pages }: Props) {
           {currentTheme === "light" ? <SunIcon /> : <MoonIcon />}
         </div>
       </header>
-      <MobileMenu
-        pages={pages}
-        toggleMobileMenu={toggleMobileMenu}
-        setToggleMobileMenu={setToggleMobileMenu}
-      />
     </>
   );
 }

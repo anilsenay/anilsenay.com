@@ -17,7 +17,7 @@ export default function Footer({}: Props) {
 
   return (
     <footer className={styles.footer}>
-      <p>All rights reserved © Anıl Şenay 2023</p>
+      <p>All rights reserved © Anıl Şenay {new Date().getFullYear()}</p>
       <div className={styles.iconsContainer}>
         <SocialMediaIcons theme={currentTheme} />
       </div>

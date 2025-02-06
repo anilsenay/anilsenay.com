@@ -9,13 +9,13 @@ export default function NavLink({
   darkMode,
 }: NavLinkProps) {
   return (
-    <Link
+    <a
       href={href}
       className={`${styles.link} ${active ? styles.active : ""} ${
         darkMode ? styles.dark : ""
       }`}
     >
       {text}
-    </Link>
+    </a>
   );
 }
