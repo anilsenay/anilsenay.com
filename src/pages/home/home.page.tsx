@@ -34,13 +34,13 @@ export default function HomePage({}: Props) {
       </Head>
       <Layout>
         <main className={styles.main}>
+          <Image
+            className={styles.background}
+            src={BlurryBackground}
+            alt="Blurry Background"
+            priority
+          />
           <div className={styles.titleContainer}>
-            <Image
-              className={styles.background}
-              src={BlurryBackground}
-              alt="Blurry Background"
-              priority
-            />
             <h1>Hey, I am Anıl</h1>
             <h1
               className={`${styles.title} ${
