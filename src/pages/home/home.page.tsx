@@ -41,7 +41,7 @@ export default function HomePage({}: Props) {
             priority
           />
           <div className={styles.titleContainer}>
-            <h1>Hey, I am Anıl</h1>
+            <h1>Hey, I'm Anıl 👋</h1>
             <h1
               className={`${styles.title} ${
                 currentTheme === "dark" ? styles.dark : ""

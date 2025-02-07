@@ -26,9 +26,11 @@ export default function Experience({}: Props) {
       <div className={styles.content}>
         <ExperienceItem timeline="2021 - Current" title="Cimri">
           I worked as Front-end developer about 1 year then I joined Back-end
-          team. I experienced in React, Next, GraphQL when I was in Front-end
-          <br />I currently work with Golang and have experience in distributed
-          systems, Kubernetes, cloud technologies, and more.
+          team. I experienced in <b>React</b>, <b>Next</b>, <b>GraphQL</b> when
+          I was in Front-end
+          <br />I currently work with <b>Golang</b> and have experience in{" "}
+          <b>distributed systems</b>, <b>Kubernetes</b>,{" "}
+          <b>cloud technologies</b>, and more.
         </ExperienceItem>
       </div>
     </div>
